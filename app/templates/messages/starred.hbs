@@ -1,0 +1,14 @@
+{{#each messages as |message|}}
+ <p>
+   {{message.body}}
+ </p>
+ Archived: {{message.archived}}
+ Starred: {{message.starred}}
+ <button type="button" name="button" {{action "toggleArchive" message}}>Toggle Archive</button>
+ <button type="button" name="button" {{action "toggleStarred" message}}>Toggle Starred</button>
+{{else}}
+  <p>
+    You have no messages
+  </p>
+{{/each}}
+{{outlet}}

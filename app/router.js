@@ -7,7 +7,13 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('about', function() {
-    this.route('developers');
+    this.route('developers', function(){
+    });
+  });
+  this.route('messages', function() {
+    this.route('inbox');
+    this.route('archived');
+    this.route('starred');
   });
 });
 
